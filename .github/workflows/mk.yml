@@ -3,7 +3,7 @@ name: Publish Test
 on: push
 jobs:
   build:
-    name: Build distribution 📦
+    name: Build distribution
     runs-on: ubuntu-latest
 
     steps:
@@ -41,11 +41,15 @@ jobs:
       with:
         name: python-package-distributions
         path: dist/
-#    - name: Publish distribution to PyPI
-#      uses: pypa/gh-action-pypi-publish@release/v1
+    - name: Publish distribution to PyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        user: __token__
+        repository_url: https://upload.pypi.org/p/mojii
+
   github-release:
     name: >-
-      Sign the Python 🐍 distribution 📦 with Sigstore
+      Sign the Python distribution with Sigstore
       and upload them to GitHub Release
     needs:
     - publish-to-pypi
