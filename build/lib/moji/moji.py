@@ -1,4 +1,3 @@
-import moji as s
 def a():
     print('Hello World!')
 
