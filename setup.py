@@ -14,8 +14,8 @@ with open(path.join(HERE, 'README.md'), encoding='utf-8') as f:
 
 # This call to setup() does all the work
 setup(
-    name="mojii",
-    version="0.2.4",
+    name="moji2",
+    version="0.1.3",
     description="Demo library",
     long_description=long_description,
     long_description_content_type="text/markdown",
